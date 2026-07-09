@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Dr. Driving</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Arcade Header UI -->
+        <div id="hud">
+            <div class="hud-box">
+                <span class="label">DIST</span>
+                <span id="score" class="value">00000</span>
+            </div>
+            <div class="hud-box">
+                <span class="label">SPEED</span>
+                <span id="speed" class="value">0</span> <span class="unit">KM/H</span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        
+        <!-- Retro Controls/Dashboard Decal -->
+        <div id="dashboard-decal">
+            <div class="wheel-icon">🕹️</div>
+            <div class="dash-text">8-BIT DRIVE COMPUTER</div>
+        </div>
+
+        <!-- Screens -->
+        <div id="start-screen">
+            <h1 class="neon-title">NEON DRIVE</h1>
+            <p class="subtitle">RETRO MISSION INBOUND</p>
+            <div class="instructions">
+                <p>◀ ▶ &nbsp; STEER CAR</p>
+                <p>▲ &nbsp; ACCELERATE</p>
+            </div>
+            <button id="start-btn">START ENGINE</button>
+        </div>
+
+        <div id="game-over-screen" class="hidden">
+            <h1 class="neon-crashed">CRASHED</h1>
+            <p>VEHICLE TOTALED</p>
+            <div class="final-stat">SCORE: <span id="final-score">0</span></div>
+            <button id="restart-btn">RETRY PAYOUT</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
